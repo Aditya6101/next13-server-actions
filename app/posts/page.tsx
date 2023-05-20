@@ -7,18 +7,15 @@ async function getPosts() {
   return posts;
 }
 
-export default async function Home() {
+export default async function Post() {
   const posts = await getPosts();
 
   return (
     <ul className="p-4">
       {posts.map((post) => (
         <li className="list-disc" key={post.id}>
-          <Link
-            href={`/posts/${post.id}`}
-            className="border-b border-neutral-400"
-          >
-            {post.title}
+          <Link href={`/posts/${post.id}`}>
+            <span className="border-b border-neutral-400">{post.title}</span>
           </Link>
         </li>
       ))}
