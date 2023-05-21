@@ -16,7 +16,10 @@ async function createPost(formData: FormData) {
 
 export default function CreatePost() {
   return (
-    <form action={createPost} className="flex flex-col w-3/4 max-w-lg py-2">
+    <form
+      action={createPost}
+      className="flex flex-col w-full max-w-lg py-2 md:w-3/4"
+    >
       <label className="text-sm text-gray-600" htmlFor="title">
         Title
       </label>
