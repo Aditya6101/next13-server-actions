@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
+import SaveButton from "./SaveButton";
 
 async function createPost(formData: FormData) {
   "use server";
@@ -40,9 +41,7 @@ export default function CreatePost() {
         className="p-1 my-2 text-sm text-gray-600 border rounded focus:outline-blue-700"
       ></textarea>
 
-      <button className="flex items-center gap-1 px-3 py-1 mt-2 text-sm text-white bg-blue-500 border rounded max-w-min">
-        Save
-      </button>
+      <SaveButton />
     </form>
   );
 }
